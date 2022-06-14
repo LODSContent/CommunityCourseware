@@ -1,0 +1,13 @@
+SAM,Fname,Lname,DisplayName
+CAAdmin1,CAAdmin1,CAOne,CAAdmin1
+CAAdmin2,CAAdmin2,CATwo,CAAdmin2
+CertManager1,CertManager1,CMOne,CertManager1
+CertManager2,CertManager2,CMTwo,CertManager2
+CAAuditor1,CAAuditor1,AuditOne,CAAuditor1
+CAAuditor2,CAAuditor2,AuditTwo,CAAuditor2
+KRA1,KRA1,KRAOne,KRA1
+KRA2,KRA2,KRATWo,KRA2
+CABackup1,CABackup1,CBOne,CABackup1
+CABackup2,CABackup2,CBTwo,CABackup2
+CertTemplate1,CertTemplate1,CTOne,CertTemplate1
+CertTemplate2,CertTemplate2,CTTwo,CertTemplate2
