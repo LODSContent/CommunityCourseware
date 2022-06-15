@@ -6,8 +6,10 @@ CertManager2,CertManager2,CMTwo,CertManager2
 CAAuditor1,CAAuditor1,AuditOne,CAAuditor1
 CAAuditor2,CAAuditor2,AuditTwo,CAAuditor2
 KRA1,KRA1,KRAOne,KRA1
-KRA2,KRA2,KRATWo,KRA2
+KRA2,KRA2,KRATwo,KRA2
 CABackup1,CABackup1,CBOne,CABackup1
 CABackup2,CABackup2,CBTwo,CABackup2
 CertTemplateMgr1,CertTemplateMgr1,CTOne,CertTemplateMgr1
 CertTemplateMgr2,CertTemplateMgr2,CTTwo,CertTemplateMgr2
+PKIUser1,PKIUser1,PKIOne,PKIUser1
+PKIUser2,PKIUser2,PKITwo,PKIUser2
