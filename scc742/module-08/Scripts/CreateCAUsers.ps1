@@ -19,7 +19,7 @@ dsadd group "cn=CA-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope
 
 dsadd group "cn=Cert-Managers,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Certificate Administration" -members "cn=CertManager1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=CertManager2,ou=Users,ou=corp,dc=hexelo,dc=com"
 
-dsadd group "cn=Cert-Template-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Certificate Template Administration" -members "cn=CertTemplate1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=CertTemplate2,ou=Users,ou=corp,dc=hexelo,dc=com"
+dsadd group "cn=Cert-Template-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Certificate Template Administration" -members "cn=CertTemplateMgr1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=CertTemplateMgr2,ou=Users,ou=corp,dc=hexelo,dc=com"
 
 dsadd group "cn=Cert-Auditors,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for CA Auditing" -members "cn=CAAuditor1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=CAAuditor2,ou=Users,ou=corp,dc=hexelo,dc=com"
 
@@ -27,4 +27,4 @@ dsadd group "cn=Cert-Backup-Operators,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc
 
 dsadd group "cn=Key-Recovery-Agents,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Key Recovery Agents" -members "cn=KRA1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=KRA2,ou=Users,ou=corp,dc=hexelo,dc=com"
 
-dsadd group "cn=Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for all CA and Certificate Admins" -members "cn=CA-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Managers,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Template-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Auditors,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Backup-Operators,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com"
+dsadd group "cn=PKIAdmins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for all CA and Certificate Admins" -members "cn=CA-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Managers,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Template-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Auditors,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Backup-Operators,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com"
