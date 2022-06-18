@@ -13,3 +13,9 @@ CertTemplateMgr1,CertTemplateMgr1,CTOne,CertTemplateMgr1
 CertTemplateMgr2,CertTemplateMgr2,CTTwo,CertTemplateMgr2
 PKIUser1,PKIUser1,PKIOne,PKIUser1
 PKIUser2,PKIUser2,PKITwo,PKIUser2
+WebAdmin1,WebAdmin1,WebOne,WebAdmin1
+WebAdmin2,WebAdmin2,WebTwo,WebAdmin2
+CAUser1,CAUser1,User1,CAUser1
+CAUser2,CAUser2,User2,CAUser1
+Dev1,Dev1,DevOne,Dev1
+Dev2,Dev2,DevTwo,Dev2

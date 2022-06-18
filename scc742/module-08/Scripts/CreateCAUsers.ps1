@@ -2,6 +2,7 @@
 
 New-ADOrganizationalUnit -Name Corp -Path 'DC=Hexelo,DC=COM'
 New-ADOrganizationalUnit -Name Users -Path 'OU=Corp,DC=Hexelo,DC=COM'
+New-ADOrganizationalUnit -Name UserGroups -Path 'OU=Corp,DC=Hexelo,DC=COM'
 New-ADOrganizationalUnit -Name Computers -Path 'OU=Corp,DC=Hexelo,DC=COM'
 New-ADOrganizationalUnit -Name AdminGroups -Path 'OU=Corp,DC=Hexelo,DC=COM'
 New-ADOrganizationalUnit -Name PKI -Path 'OU=AdminGroups,OU=Corp,DC=Hexelo,DC=COM'
@@ -28,3 +29,9 @@ dsadd group "cn=Cert-Backup-Operators,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc
 dsadd group "cn=Key-Recovery-Agents,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Key Recovery Agents" -members "cn=KRA1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=KRA2,ou=Users,ou=corp,dc=hexelo,dc=com"
 
 dsadd group "cn=PKIAdmins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for all CA and Certificate Admins" -members "cn=CA-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Managers,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Template-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Auditors,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Backup-Operators,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com"
+
+dsadd group "cn=WebAdmins,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Web Admins" -members "cn=WebAdmin1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=WebAdmin2,ou=Users,ou=corp,dc=hexelo,dc=com" 
+
+dsadd group "cn=PKIUsers,ou=UserGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for PKI Users" -members "cn=PKIUser1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=PKIUser2,ou=Users,ou=corp,dc=hexelo,dc=com" 
+
+dsadd group "cn=CodeSigners,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Code Signers" -members "cn=Dev1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=Dev2,ou=Users,ou=corp,dc=hexelo,dc=com" 

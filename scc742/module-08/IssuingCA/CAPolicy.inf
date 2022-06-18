@@ -1,18 +1,46 @@
 [Version]
 Signature="$Windows NT$"
 
+[PolicyStatementExtension]
+Policies=CPS,HexeloLowSign,HexeloLowEncrypt,HexeloMediumSign,HexeloMediumEncrypt,HexeloHighSign,HexeloHighEncrypt
+
+[CPS]
+OID=1.3.6.1.4.1.99999.509.1
+NOTICE = "Certificate Practice Statement and Policies Repository"
+URL=http://cps.hexelo.com
+
+[HexeloLowSign]
+OID=1.3.6.1.4.1.99999.509.2.2.1
+URL = http://cps.hexelo.com/polices/lasigning.html
+
+[HexeloLowEncrypt]
+OID=1.3.6.1.4.1.99999.509.2.2.2
+URL = http://cps.hexelo.com/polices/laencryption.html
+
+[HexeloMediumSign]
+OID=1.3.6.1.4.1.99999.509.2.3.1
+URL = http://cps.hexelo.com/polices/masigning.html
+
+[HexeloMediumEncrypt]
+OID=1.3.6.1.4.1.99999.509.2.3.2
+http://cps.hexelo.com/polices/maencryption.html
+
+[HexeloHighSign]
+OID=1.3.6.1.4.1.99999.509.2.4.1
+URL = http://cps.hexelo.com/polices/hasigning.html
+
+[HexeloHighEncrypt]
+OID=1.3.6.1.4.1.99999.509.2.4.2
+http://cps.hexelo.com/polices/maencryption.html
+
 [certsrv_server]
-renewalkeylength=4096
-RenewalValidityPeriodUnits=20
+renewalkeylength=2048
+RenewalValidityPeriodUnits=5
 RenewalValidityPeriod=years
 
-CRLPeriod=weeks
-CRLPeriodUnits=26
-CRLDeltaPeriodUnits=0
-CRLDeltaPeriod=days
+CRLPeriod=days
+CRLPeriodUnits=1
+CRLDeltaPeriodUnits=8
+CRLDeltaPeriod=hours
+LoadDefaultTemplates=0
 
-[CRLDistributionPoint]
-Empty=True
-
-[AuthorityInformationAccess]
-Empty=True
