@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hexelo Low Assurance Signing Policy</title>
+        <meta name="description" content="Policy for issuing low assurance signing certificates">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Hexelo Low Assurance Signing Policy</h1>
+        <p>
+            Signing certificates are used to verify the identity of the subject of the certificate.
+        </p>
+        <p>
+            Low assurance signing certificates can be issued and renewed upon successful authentication to Active Directory.
+            Low assurance signing certificates may be manually enrolled or renewed and may also be autoenrolled and autorenewed through Active Directory Group Policy mechanisms.
+            The subject of the certificate is identified by their knowledge of the account’s user name and password combination. 
+        </p>
+        <p>
+            The certificate and related private key are stored on the hard disk in the user’s profile. 
+            The certificate may only be used for signing purposes and cannot be archived for private key recovery. 
+            Signing certificates do not allow export of the private key.
+        </p>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>
