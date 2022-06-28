@@ -9,7 +9,7 @@ New-ADOrganizationalUnit -Name PKI -Path 'OU=AdminGroups,OU=Corp,DC=Hexelo,DC=CO
 New-ADOrganizationalUnit -Name PKIServers -Path 'OU=Computers,OU=Corp,DC=Hexelo,DC=COM'
 
 # Create users from csv file
-Import-Csv D:\LabFiles\Scripts\users.csv | foreach {New-AdUser -Name "$($_.DisplayName)" -SAMAccountName ($_.SAM) -UserPrincipalName ($_.SAM + "@Hexelo.com")  -DisplayName "$($_.DisplayName)" -GivenName "$($_.Fname)" -Surname "$($_.Lname)" -AccountPassword (ConvertTo-SecureString -AsPlainText "Passw0rd!" -Force)  -PasswordNeverExpires $true -Path 'OU=Users,OU=Corp,DC=Hexelo,DC=com'}  
+Import-Csv D:\LabFiles\Scripts\users.csv | foreach {New-AdUser -Name "$($_.DisplayName)" -SAMAccountName ($_.SAM) -UserPrincipalName ($_.SAM + "@Hexelo.com") -EmailAddress ($_.SAM + "@Hexelo.com")  -DisplayName "$($_.DisplayName)" -GivenName "$($_.Fname)" -Surname "$($_.Lname)" -AccountPassword (ConvertTo-SecureString -AsPlainText "Passw0rd!" -Force)  -PasswordNeverExpires $true -Path 'OU=Users,OU=Corp,DC=Hexelo,DC=com'}  
 
 # Enable all accounts created in the Users OU
 Get-ADUser -Filter * -SearchBase "OU=Users,OU=Corp,DC=Hexelo,DC=com" | Where-Object{$_.Enabled -like "False"} | Enable-AdAccount
