@@ -42,5 +42,8 @@ CRLPeriod=days
 CRLPeriodUnits=1
 CRLDeltaPeriodUnits=8
 CRLDeltaPeriod=hours
+CRLOverlapPeriod=4
+CRLOverlapUnits=hours
+
 LoadDefaultTemplates=0
 
