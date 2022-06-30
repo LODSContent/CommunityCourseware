@@ -16,7 +16,7 @@ Get-ADUser -Filter * -SearchBase "OU=Users,OU=Corp,DC=Hexelo,DC=com" | Where-Obj
 
 #Create PKI groups and add members
 
-dsadd group "cn=CA-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Administering CA" -members "cn=CAAdmin1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=CAAdmin2,ou=Users,ou=corp,dc=hexelo,dc=com"
+dsadd group "cn=CA-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Administering CA" -members "cn=CAAdmin1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=CAAdmin2,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=svcPKITasks,ou=Users,ou=corp,dc=hexelo,dc=com"
 
 dsadd group "cn=Cert-Managers,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Certificate Administration" -members "cn=CertManager1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=CertManager2,ou=Users,ou=corp,dc=hexelo,dc=com"
 
@@ -27,6 +27,8 @@ dsadd group "cn=Cert-Auditors,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -s
 dsadd group "cn=Cert-Backup-Operators,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Backing up CA" -members "cn=CABackup1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=CABackup2,ou=Users,ou=corp,dc=hexelo,dc=com"
 
 dsadd group "cn=Key-Recovery-Agents,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Key Recovery Agents" -members "cn=KRA1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=KRA2,ou=Users,ou=corp,dc=hexelo,dc=com"
+
+dsadd group "cn=CRLPublisher,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for users who can copy CRLs and AIA to CDP locations" -members "cn=CA-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com"
 
 dsadd group "cn=PKIAdmins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for all CA and Certificate Admins" -members "cn=CA-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Managers,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Template-Admins,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Auditors,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" "cn=Cert-Backup-Operators,ou=pki,ou=AdminGroups,ou=corp,dc=hexelo,dc=com"
 
