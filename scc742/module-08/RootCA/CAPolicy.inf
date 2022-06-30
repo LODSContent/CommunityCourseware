@@ -10,6 +10,10 @@ CRLPeriod=weeks
 CRLPeriodUnits=26
 CRLDeltaPeriodUnits=0
 CRLDeltaPeriod=days
+CRLOverlapPeriod=10
+CRLOverlapUnits=days
+
+
 
 [CRLDistributionPoint]
 Empty=True
