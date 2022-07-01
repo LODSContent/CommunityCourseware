@@ -7,25 +7,23 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Hexelo Low Assurance Encryption Policy</title>
+        <title>Hexelo High Assurance Encryption Policy</title>
         <meta name="description" content="Policy for issuing low assurance encryption certificates">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1>Hexelo Low Assurance Encryption Policy</h1>
+        <h1>Hexelo High Assurance Encryption Policy</h1>
         <p>
             Encryption certificates are used to protect the confidentiality and integrity of data.
         </p>
-        <p>
-            Low assurance encryption certificates can be issued and renewed upon successful authentication to Active Directory.
-            Low assurance encryption certificates may be manually enrolled or renewed and may also be autoenrolled and autorenewed through Active Directory Group Policy mechanisms.
-            The subject of the certificate is identified by their knowledge of the account’s user name and password combination. 
+            High assurance encryption certificates are issued only after successful authentication in a face-to-face meeting using a valid government-issued photo ID, 
+            such as a driver's license, passport, or Nexus card. The Local Registration Authority (LRA) must record the details of the government ID and store these 
+            details securely before issuing the certificate. 
         </p>
         <p>
-            The certificate and related private key are stored on the hard disk in the user’s profile. 
-            The certificate may only be used for encryption and decryption purposes and must be archived for private key recovery. 
-            Encryption certificates allow export of the private key or allow a one-time export of the private key.
+            The certificate and related private key are stored on cryptographically secured hardware, such as a smart card, USB token, or Trusted Platform Module (TPM) chip. 
+            The certificate may only be used for encryption purposes and must not be archived for private key recovery.             
         </p>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
