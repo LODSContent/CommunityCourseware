@@ -7,6 +7,7 @@ New-ADOrganizationalUnit -Name Computers -Path 'OU=Corp,DC=Hexelo,DC=COM'
 New-ADOrganizationalUnit -Name AdminGroups -Path 'OU=Corp,DC=Hexelo,DC=COM'
 New-ADOrganizationalUnit -Name PKI -Path 'OU=AdminGroups,OU=Corp,DC=Hexelo,DC=COM'
 New-ADOrganizationalUnit -Name PKIServers -Path 'OU=Computers,OU=Corp,DC=Hexelo,DC=COM'
+New-ADOrganizationalUnit -Name ComputerGroups -Path 'OU=Corp,DC=Hexelo,DC=COM'
 
 # Create users from csv file
 Import-Csv D:\LabFiles\Scripts\users.csv | foreach {New-AdUser -Name "$($_.DisplayName)" -SAMAccountName ($_.SAM) -UserPrincipalName ($_.SAM + "@Hexelo.com") -EmailAddress ($_.SAM + "@Hexelo.com")  -DisplayName "$($_.DisplayName)" -GivenName "$($_.Fname)" -Surname "$($_.Lname)" -AccountPassword (ConvertTo-SecureString -AsPlainText "Passw0rd!" -Force)  -PasswordNeverExpires $true -Path 'OU=Users,OU=Corp,DC=Hexelo,DC=com'}  
@@ -37,3 +38,5 @@ dsadd group "cn=WebAdmins,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -des
 dsadd group "cn=PKIUsers,ou=UserGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for PKI Users" -members "cn=PKIUser1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=PKIUser2,ou=Users,ou=corp,dc=hexelo,dc=com" 
 
 dsadd group "cn=CodeSigners,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Code Signers" -members "cn=Dev1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=Dev2,ou=Users,ou=corp,dc=hexelo,dc=com" 
+
+dsadd group "cn=WebServers,ou=ComputerGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Web Servers" -members "cn=WIN-SRV22-001$,cn=Computers,dc=hexelo,dc=com" 
