@@ -39,4 +39,4 @@ dsadd group "cn=PKIUsers,ou=UserGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc 
 
 dsadd group "cn=CodeSigners,ou=AdminGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Code Signers" -members "cn=Dev1,ou=Users,ou=corp,dc=hexelo,dc=com" "cn=Dev2,ou=Users,ou=corp,dc=hexelo,dc=com" 
 
-dsadd group "cn=WebServers,ou=ComputerGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Web Servers" -members "cn=WIN-SRV22-001$,cn=Computers,dc=hexelo,dc=com" 
+dsadd group "cn=WebServers,ou=ComputerGroups,ou=corp,dc=hexelo,dc=com" -scope g -desc "Group for Web Servers" -members "cn=WIN-SRV22-001,cn=Computers,dc=hexelo,dc=com" 
