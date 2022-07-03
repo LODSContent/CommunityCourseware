@@ -2,7 +2,12 @@
 Signature="$Windows NT$"
 
 [PolicyStatementExtension]
-Policies=HexeloLowSign,HexeloLowEncrypt,HexeloMediumSign,HexeloMediumEncrypt,HexeloHighSign,HexeloHighEncrypt
+Policies=CPS,HexeloLowSign,HexeloLowEncrypt,HexeloMediumSign,HexeloMediumEncrypt,HexeloHighSign,HexeloHighEncrypt
+
+[CPS]
+OID=1.3.6.1.4.1.99999.509.1
+NOTICE = "Certificate Practice Statement and Policies Repository"
+URL=http://cps.hexelo.com
 
 [HexeloLowSign]
 OID=1.3.6.1.4.1.99999.509.2.2.1
