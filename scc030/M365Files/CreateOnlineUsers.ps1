@@ -1,4 +1,16 @@
-﻿$msolcred=Get-Credential
+﻿$azmodule = Get-module -Name azuread
+$msolmodule = Get-module -name msonline
+
+If ($null -eq $azmodule) {
+  install-module azuread
+}
+
+if ($null -eq $msolmodule) {
+  install-module msonline
+}
+
+
+$msolcred=Get-Credential
 Connect-MsolService -Credential $msolcred
 Connect-AzureAD -Credential $msolcred
 
