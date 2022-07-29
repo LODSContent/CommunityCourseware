@@ -2,11 +2,11 @@
 $msolmodule = Get-module -name msonline
 
 If ($null -eq $azmodule) {
-  install-module azuread
+  import-module azuread
 }
 
 if ($null -eq $msolmodule) {
-  install-module msonline
+  import-module msonline
 }
 
 
